@@ -1,0 +1,7 @@
+GET http://localhost:5000/api/sessions
+
+###
+GET http://localhost:5000/api/new-chat
+
+###
+GET http://localhost:5000/api/session/:id
