@@ -19,7 +19,7 @@ export default function ChatWindow() {
   useEffect(() => {
     if (!sessionId) return;
     setLoading(true);
-    fetch(`http://localhost:5000/api/session/${sessionId}`)
+    fetch(`https://chat-application-0zaa.onrender.com/api/session/${sessionId}`)
       .then(res => res.json())
       .then(data => {
         setMessages(data);
@@ -37,7 +37,7 @@ export default function ChatWindow() {
     setLoading(true);
 
     try {
-      const res = await fetch(`http://localhost:5000/api/chat/${sessionId}`, {
+      const res = await fetch(`https://chat-application-0zaa.onrender.com/api/chat/${sessionId}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ question })

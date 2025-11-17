@@ -12,14 +12,14 @@ export default function Sidebar({ isOpen }) {
   };
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/sessions')
+    fetch('https://chat-application-0zaa.onrender.com/api/sessions')
       .then(res => res.json())
       .then(data => setSessions(data))
       .catch(err => console.error('Failed to load sessions:', err));
   }, []);
 
   const handleNewChat = () => {
-    fetch('http://localhost:5000/api/new-chat')
+    fetch('https://chat-application-0zaa.onrender.com/api/new-chat')
       .then(res => res.json())
       .then(data => {
         navigate(`/chat/${data.id}`);
